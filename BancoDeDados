@@ -1,0 +1,10 @@
+CREATE DATABASE tmdb_filmes;
+USE tmdb_filmes;
+
+CREATE TABLE filmes (
+    id int NOT NULL AUTO_INCREMENT,
+    titulo varchar(255) DEFAULT NULL,
+    descricao text,
+    poster varchar(255) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
