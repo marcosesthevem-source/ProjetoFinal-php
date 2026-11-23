@@ -1,0 +1,6 @@
+# Credenciais locais do TMDB
+/config_tmdb.php
+
+# Arquivos locais e temporários
+.env
+.DS_Store

@@ -1,0 +1,26 @@
+# ProjetoFinal-php
+
+Projeto PHP que consulta filmes populares na API do TMDB e armazena os resultados no MySQL.
+
+## Configuração local (XAMPP)
+
+1. Clone o repositório dentro de `C:\xampp\htdocs\ProjetoFinal-php`.
+2. Crie o banco e a tabela executando o script SQL disponibilizado no arquivo `db` pelo phpMyAdmin.
+3. Copie `config_tmdb.example.php` para um novo arquivo chamado `config_tmdb.php`.
+4. Abra `config_tmdb.php` e substitua o texto de exemplo pelo seu **API Read Access Token (v4)** do TMDB.
+5. Confira os dados de conexão MySQL em `config.php`.
+6. No PHP do XAMPP, habilite a extensão `curl` no arquivo `php.ini` e reinicie o Apache.
+7. Acesse `http://localhost/ProjetoFinal-php/`.
+
+O arquivo `config_tmdb.php` é local e está no `.gitignore`: não o envie ao GitHub e não compartilhe seu token.
+
+## Como funciona
+
+- `controller/filmeController.php`: coordena a importação e a listagem.
+- `model/filmeModel.php`: consulta o endpoint `/movie/popular` do TMDB e grava os filmes no MySQL.
+- `view/filmeView.php`: apresenta os filmes.
+- `config.php`: conexão com o banco MySQL.
+
+A integração utiliza o idioma `pt-BR` e a autenticação Bearer com o Read Access Token v4.
+
+Este projeto utiliza dados e imagens do TMDB. Consulte os termos e as regras de atribuição em https://www.themoviedb.org/.
