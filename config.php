@@ -16,5 +16,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
-    die("Não foi possível realizar a conexão!");
+    die("Não foi possível realizar a conexão com o banco de dados!");
 }
+
+?>
