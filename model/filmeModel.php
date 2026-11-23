@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php'
 function importarFilmesDaAPI($api_key){  
-    $url = "";
+    $url = "http://api.themoviedb.org/3/movie/popular?api_key=$api_key&language=pt-BR";
  
     $response = file_get_contents($url); // Json
     $data = json_decode($response, true); // Converte Json para Array Associativo
@@ -50,4 +50,5 @@ function listarFilmes(){
     $result = $pdo->query($sql);
     return $result->fetchAll(PDO::FETCH_ASSOC);
 }
+
 ?>
